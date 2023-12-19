@@ -23,7 +23,8 @@ module.exports = {
     "prettier/prettier": [
       "warn",
       {
-        "endOfLine": "auto"
+        "endOfLine": "auto",
+        "singleQuote": true,
       }
     ],
     "react-hooks/rules-of-hooks": "error",
