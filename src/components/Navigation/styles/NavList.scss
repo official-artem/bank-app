@@ -1,13 +1,14 @@
 .header__nav--list {
-  flex-grow: 1;
   border-radius: 3rem;
   background-color: #fff;
   padding: 0 4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  grid-column: 2 / -1;
+  grid-row: 1 / 2;
 }
 
 .header__link {
-  padding: 1.5rem clamp(1rem, 1.5vw, 2rem);
+  // padding: 1.5rem clamp(1rem, 1.5vw, 2rem);
 }

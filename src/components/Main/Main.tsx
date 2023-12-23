@@ -1,14 +1,14 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 import { Cards } from "../Cards";
 import { TotalBalance } from "../TotalBalance";
-import { InviteBonusProgram } from "@/InviteBonusProgram";
+import { InviteBonusProgram } from "@/components/InviteBonusProgram";
 import { RecentContacts } from "../RecentContacts";
 import { TransactionsHistory } from "../TransactionsHistory";
 
-export const Main: FC = () => {
+export const Main: FC = memo(() => {
   return (
     <main>
-      <Cards />
+      <Cards name="Artem" surname="Hrechuk" code="012345678910" />
 
       <TotalBalance />
 
@@ -19,6 +19,6 @@ export const Main: FC = () => {
       <TransactionsHistory />
     </main>
   );
-};
+});
 
 export default Main;

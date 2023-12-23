@@ -1,9 +1,10 @@
 import Navigation from "../Navigation/NavList";
 import Search from "../Search/Search";
-import { navLinks } from "@/data/links";
+import { navLinks } from "@/data/header_links";
 import "./styles/Header.scss";
+import { memo } from "react";
 
-export const Header = () => {
+export const Header = memo(() => {
   return (
     <header className="header">
       <Search name="Artem" />
@@ -11,6 +12,4 @@ export const Header = () => {
       <Navigation links={navLinks} />
     </header>
   );
-};
-
-export default Header;
+});

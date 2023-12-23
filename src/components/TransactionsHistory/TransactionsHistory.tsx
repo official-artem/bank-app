@@ -1,7 +1,7 @@
 import { FC } from "react";
 
 export const TransactionsHistory: FC = () => {
-  return <div>TransactionsHistory</div>;
+  return <div></div>;
 };
 
 export default TransactionsHistory;

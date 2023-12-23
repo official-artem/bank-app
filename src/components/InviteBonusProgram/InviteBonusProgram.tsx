@@ -1,5 +1,5 @@
 import { FC } from "react";
 
-export const RecentContacts: FC = () => {
+export const InviteBonusProgram: FC = () => {
   return <div></div>;
 };
