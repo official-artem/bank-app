@@ -11,9 +11,8 @@ html {
 .body__wrapper {
   background-color: $bg-white;
   height: 100vh;
-  gap: 3rem;
+  gap: 1.5rem;
   padding: 1.5rem;
   display: grid;
-  grid-template-rows: auto 1fr 1fr 2fr;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr;
 }

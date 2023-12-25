@@ -7,14 +7,16 @@ interface Props {
 
 export const Search: FC<Props> = ({ name }) => {
   return (
-    <label className="header__search--label" htmlFor="header__search">
-      <input
-        id="header__search"
-        className="header__search"
-        type="text"
-        placeholder={`Welcome back, ${name}!`}
-      />
-      <div className="header__search--underline"></div>
+    <label className="search-label" htmlFor="search">
+      <div className="search__wrapper">
+        <input
+          id="search"
+          className="search"
+          type="text"
+          placeholder={`Welcome back, ${name}!`}
+        />
+        <div className="search-underline"></div>
+      </div>
     </label>
   );
 };

@@ -1,12 +1,48 @@
 .cards {
   background-color: #fff;
-  border-radius: 1.5rem;
-  padding: 1rem;
-  grid-row: 2 / 4;
+  border-radius: 1rem;
+  padding: 2rem 1rem 1rem;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+
+  &__link-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &_link-item-wrapper {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  &__img-cvv {
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    border-radius: 2rem;
+    cursor: pointer;
+  }
+
+  &_arrow_img {
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: transform 0.3s ease-out;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:hover .cards_arrow_img {
+      transform: translateX(-100%);
+    }
+  }
 
   &__img-wrapper {
     border-radius: 1.5rem 1.5rem 0 0;
-    padding: 2rem 0;
+    padding: 2rem;
     position: relative;
     background-color: #000;
     color: #fff;
@@ -17,6 +53,8 @@
 
   &__link-wrapper {
     color: #000;
+    padding-top: 2rem;
+    padding-inline: 1rem;
   }
 
   &__link-icon {
@@ -31,11 +69,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-bottom: 2rem;
   }
 
   &__img--bottom {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
   }
 
   &__card-code {
@@ -46,25 +86,89 @@
 
   &__img--top {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   &__user-name {
     font-weight: 400;
   }
+
+  &__wrapper {
+    position: relative;
+    color: #fff;
+    height: 10rem;
+  }
+
+  &__buttons-wrapper {
+    padding: 3rem 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__button {
+    padding: 1rem 2rem;
+    border-radius: 7rem;
+    gap: 1rem;
+    display: flex;
+    justify-content: space-between;
+    transition: transform 0.3s ease-in;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &--add {
+      background-color: #6e468f;
+      color: #fff;
+
+      &:hover::after {
+        animation: rotate 1s ease;
+      }
+
+      &::after {
+        content: '';
+        background-image: url('../../../assets/plus-icon-white.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+
+    &--remove {
+      background-color: #fef2f1;
+      color: #ed3c21;
+
+      &::after {
+        content: '';
+        background-image: url('../../../assets/minus-icon.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+
+      &:hover::after {
+        animation: rotate 1s ease;
+      }
+    }
+  }
 }
 
-.cards__wrapper {
-  position: relative;
-  color: #fff;
-
-  height: 10rem;
+@keyframes rotate{
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .master-card-logo {
     content: '';
     display: inline-block;
-    background-image: url('../../../assets/mastercard-svgrepo-com.svg');
+    background-image: url('../../../assets/mastercard-icon.svg');
     background-size: contain;
     background-repeat: no-repeat;
     height: 2rem;
